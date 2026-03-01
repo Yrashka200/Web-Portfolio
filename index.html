@@ -29,6 +29,8 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#friends" class="nav-link">Friends</a></li>
+                <li><a href="#recommendations" class="nav-link">Recommend</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
@@ -39,6 +41,7 @@
             <a href="https://instagram.com/yrashka200" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://yrashka200.github.io/blog.yrashka.github.io/" target="_blank" class="social-link" aria-label="Old Site"><i class="fa-solid fa-globe"></i></a>
         </div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </div>
 </header>
 
@@ -308,10 +311,13 @@
 </section>
 
 
+
 <!-- Friends Section -->
 <section id="friends" class="friends">
     <div class="container">
         <h2 class="section-title">Friends</h2>
+        
+
         <div class="friends-grid">
             <!-- Yrashka's Friend Card -->
             <div class="friend-card">
@@ -320,22 +326,57 @@
                 </div>
                 <div class="friend-info">
                     <h3>Yrashka200</h3>
-                    <div class="friend-social">
+                    <p class="friend-bio">Junior Python Developer • Open Source enthusiast</p>
+                    <div class="friend-links">
                         <a href="https://github.com/Yrashka200" target="_blank" class="friend-link">
-                            <i class="fa-brands fa-github"></i> @Yrashka200
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://yrashka200.github.io/blog.yrashka.github.io/" target="_blank" class="friend-link">
+                            <i class="fa-solid fa-blog"></i> Blog
                         </a>
                     </div>
-                   <p class="friend-message">
-    At this moment I don't have friends. But you can be my friend! 
-    <a href="#contact" class="contact-link">Use contact to connect with me :)</a>
-</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="friends-note">
+            <i class="fa-regular fa-hand-peace"></i> At this moment I don't have friends here. But you can be my first! Follow the instructions above to add your site.
+        </p>
+    </div>
+</section>
+
+<!-- Recommendations Section -->
+<section id="recommendations" class="recommendations">
+    <div class="container">
+        <h2 class="section-title">Yrashka Recommendate</h2>
+        <div class="recommendations-grid">
+            <!-- Blog Card -->
+            <a href="https://yrashka200.github.io/blog.yrashka.github.io/" target="_blank" class="recommend-card">
+                <div class="recommend-icon">
+                    <i class="fa-solid fa-blog"></i>
+                </div>
+                <div class="recommend-content">
+                    <h3>Personal Blog</h3>
+                    <p>My upcoming blog — thoughts, notes, and experiments</p>
+                    <span class="recommend-link">
+                        Visit <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+            
+            <!-- Placeholder for more recommendations -->
+            <div class="recommend-card placeholder">
+                <div class="recommend-icon">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="recommend-content">
+                    <h3>More coming soon...</h3>
+                    <p>I'm working on new projects to recommend</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
 
 <section id="contact" class="contact">
     <div class="container">
@@ -373,7 +414,6 @@
             <div class="contact-form-wrapper">
                 <h3 class="form-title">Or send me a message</h3>
                 
-                
                 <div id="form-message" class="form-message" style="display: none;"></div>
                 
                 <form action="https://formspree.io/f/xjgejlzk" method="POST" class="contact-form">
@@ -398,7 +438,6 @@
                         <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
                     </div>
                     
-                    <!-- Honeypot field to prevent spam -->
                     <input type="text" name="_gotcha" style="display:none">
                     
                     <button type="submit" class="submit-btn" id="submit-btn">
@@ -416,14 +455,43 @@
 
 <footer class="footer">
     <p>check out my old site: <a href="https://yrashka2025.github.io/Web-Portfolio/" target="_blank">Old Site</a></p>
-</footer>
-
-<footer class="footer">
     <p>© 2026 Yrashka</p>
 </footer>
 
-
 <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    });
+
     // Contact form handling
     document.getElementById('contact-form').addEventListener('submit', async function(e) {
         e.preventDefault(); 
@@ -433,7 +501,6 @@
         const messageDiv = document.getElementById('form-message');
         const submitBtn = document.getElementById('submit-btn');
         const originalBtnText = submitBtn.innerHTML;
-        
         
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
@@ -448,11 +515,9 @@
             });
             
             if (response.ok) {
-              
                 form.reset(); 
                 showMessage('Thank you! Your message has been sent successfully. I will answer you as soon as possible.', 'success');
             } else {
-                
                 const data = await response.json();
                 if (data.errors) {
                     showMessage(data.errors.map(error => error.message).join(', '), 'error');
@@ -461,15 +526,12 @@
                 }
             }
         } catch (error) {
-            
             showMessage('Network error. Please check your connection and try again.', 'error');
         } finally {
-            
             submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send message';
             submitBtn.disabled = false;
         }
     });
-    
     
     function showMessage(message, type) {
         const messageDiv = document.getElementById('form-message');
@@ -477,16 +539,13 @@
         messageDiv.className = 'form-message ' + type;
         messageDiv.style.display = 'block';
         
-        
         setTimeout(() => {
             messageDiv.style.display = 'none';
         }, 5000);
         
-        
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 </script>
-
 
 </body>
 </html>
