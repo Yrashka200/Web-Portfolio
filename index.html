@@ -3,247 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yrashka · card</title>
-
+    <title>Yrashka · new design</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0b0f;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: 
+                radial-gradient(circle at 20% 20%, #1a1a2e 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, #16213e 0%, transparent 40%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .card {
+            background: rgba(20, 20, 30, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #2a2a3a;
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7);
+        }
+        
+        .icon {
+            font-size: 70px;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+        
+        .message {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        
+        .feature {
+            background: #151520;
+            border: 1px solid #2a2a3a;
+            border-radius: 16px;
+            padding: 15px 5px;
+        }
+        
+        .feature i {
+            font-size: 24px;
+            color: #00d4ff;
+            margin-bottom: 8px;
+        }
+        
+        .feature span {
+            display: block;
+            font-size: 13px;
+            color: #aaa;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 18px 50px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(123, 47, 247, 0.4);
+            width: 100%;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(123, 47, 247, 0.6);
+        }
+        
+        .btn i {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover i {
+            transform: translateX(8px);
+        }
+        
+        .note {
+            margin-top: 25px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .note a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        
+        .note a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 500px) {
+            .card {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .btn {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="card">
-    
-    
+<div class="container">
+    <div class="card">
+        
+      
+        <div class="icon">
+            <i class="fa-regular fa-sparkles"></i>
+        </div>
+        
+        
+        <div class="badge">
+            ✦ NEW DESIGN ✦
+        </div>
+        
+        
+        <h1>Fresh Look,<br>Same Yrashka</h1>
+        
+        
+        <div class="message">
+            I've redesigned my portfolio with a cleaner,<br>
+            more minimalistic look. Everything is now<br>
+            in one card — simple and fast.
+        </div>
+
+        
     <div class="profile">
         <img class="avatar" src="https://avatars.githubusercontent.com/u/259258104?v=4" alt="Yrashka">
         <h1>Yrashka</h1>
         <p class="tag">Junior Python Developer · Open Source</p>
     </div>
 
-   
-    <div class="nav-tabs">
-        <button class="tab-btn active" onclick="switchTab('about')">
-            <i class="fa-regular fa-user"></i> About
-        </button>
-        <button class="tab-btn" onclick="switchTab('projects')">
-            <i class="fa-regular fa-folder-open"></i> Projects
-        </button>
-        <button class="tab-btn" onclick="switchTab('hobby')">
-            <i class="fa-regular fa-heart"></i> Hobby
-        </button>
-        <button class="tab-btn" onclick="switchTab('contact')">
-            <i class="fa-regular fa-envelope"></i> Contact
-        </button>
-    </div>
 
-    
-    <div class="tab-content">
-        
-        
-        <div id="about" class="tab-pane active">
-            <div class="about-text">
-                <p>I'm a junior Python developer and open-source enthusiast. I build small tools that automate repetitive tasks and experiment with web technologies.</p>
-                <p>Currently focusing on writing clean code. Open to collaboration.</p>
+
+       
+        <div class="features">
+            <div class="feature">
+                <i class="fa-regular fa-layer-group"></i>
+                <span>One card</span>
             </div>
-
-            <div class="stats-mini">
-                <div class="stat-item">
-                    <span class="stat-value">10+</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">53+</span>
-                    <span class="stat-label">Contributions</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">Python</span>
-                    <span class="stat-label">Main stack</span>
-                </div>
+            <div class="feature">
+                <i class="fa-regular fa-bolt"></i>
+                <span>Faster</span>
             </div>
-
-            <div class="skills-mini">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">Automation</span>
-                <span class="skill-tag">Go</span>
-                <span class="skill-tag">API</span>
-                <span class="skill-tag">Git</span>
+            <div class="feature">
+                <i class="fa-regular fa-mobile"></i>
+                <span>Mobile first</span>
             </div>
-        </div> 
-
-        
-        <div id="projects" class="tab-pane">
-            <div class="projects-grid">
-                <a href="https://github.com/Yrashka200/PyASCII" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-image"></i> PyASCII</h3>
-                    <p>Convert images to ASCII art</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Yrashka200/Pc-Cleaner" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-trash-can"></i> PC Cleaner</h3>
-                    <p>Automated junk cleaner</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Yrashka200/Brawl-Stars-Profile-bot" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-robot"></i> Brawl Bot</h3>
-                    <p>Telegram bot for stats</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>API</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Yrashka200/PyOrganizer-" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-list-check"></i> PyOrganizer</h3>
-                    <p>Task management tool</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>CLI</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Yrashka200/Python-Project-Ideas-Generator" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-lightbulb"></i> Ideas Gen</h3>
-                    <p>Generate project ideas</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Yrashka200/Py-anime-Chat" target="_blank" class="project-card">
-                    <h3><i class="fa-regular fa-comments"></i> Py-anime-Chat</h3>
-                    <p>Chat bot with anime interface</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Bot</span>
-                    </div>
-                </a>
-            </div>
-        </div> 
-
-        
-        <div id="hobby" class="tab-pane">
-            <div class="hobby-grid">
-                <div class="hobby-item">
-                    <div class="hobby-icon"><i class="fa-solid fa-gamepad"></i></div>
-                    <div class="hobby-content">
-                        <h3>Gaming</h3>
-                        <p>Sometimes I play games to relax after coding sessions</p>
-                    </div>
-                </div>
-                <div class="hobby-item">
-                    <div class="hobby-icon"><i class="fa-solid fa-headphones"></i></div>
-                    <div class="hobby-content">
-                        <h3>Music</h3>
-                        <p>Listening to music 24/7 to stay focused</p>
-                    </div>
-                </div>
-                <div class="hobby-item">
-                    <div class="hobby-icon"><i class="fa-solid fa-book-open"></i></div>
-                    <div class="hobby-content">
-                        <h3>Learning</h3>
-                        <p>Every day I try to learn something new</p>
-                    </div>
-                </div>
-                <div class="hobby-item">
-                    <div class="hobby-icon"><i class="fa-solid fa-mug-hot"></i></div>
-                    <div class="hobby-content">
-                        <h3>Coffee</h3>
-                        <p>Good coffee keeps long coding sessions enjoyable</p>
-                    </div>
-                </div>
-                <div class="hobby-item">
-                    <div class="hobby-icon"><i class="fa-solid fa-code"></i></div>
-                    <div class="hobby-content">
-                        <h3>Open Source</h3>
-                        <p>Contributing to projects and learning from others</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        
-        <div id="contact" class="tab-pane">
-            <div class="contact-links">
-                <a href="https://github.com/Yrashka200" target="_blank" class="contact-card">
-                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-                    <h3>GitHub</h3>
-                    <p>@Yrashka200</p>
-                </a>
-                <a href="https://bsky.app/profile/yrashka.bsky.social" target="_blank" class="contact-card">
-                    <div class="contact-icon"><i class="fa-brands fa-bluesky"></i></div>
-                    <h3>Bluesky</h3>
-                    <p>@yrashka</p>
-                </a>
-                <a href="https://x.com/Yrashka200" target="_blank" class="contact-card">
-                    <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
-                    <h3>X</h3>
-                    <p>@Yrashka200</p>
-                </a>
-                <a href="https://instagram.com/yrashka200" target="_blank" class="contact-card">
-                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
-                    <h3>Instagram</h3>
-                    <p>@yrashka200</p>
-                </a>
-                <a href="https://yrashka200.github.io/blog.yrashka.github.io/" target="_blank" class="contact-card">
-                    <div class="contact-icon"><i class="fa-solid fa-blog"></i></div>
-                    <h3>Blog</h3>
-                    <p>My blog</p>
-                </a>
-            </div>
-
-            <p class="contact-text">Or send me a message — I'll answer asap</p>
-            
-            <form class="form" action="https://formspree.io/f/xjgejlzk" method="POST">
-                <div class="form-row">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                </div>
-                
-                <textarea name="message" placeholder="Your message..." required></textarea>
-                
-                <button type="submit">
-                    <i class="fa-regular fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-        </div> 
-    </div> 
-
-   
-    <div class="footer">
-        © 2026 Yrashka · <a href="https://yrashka2025.github.io/Web-Portfolio/" target="_blank">old site</a>
-    </div>
-</div> 
-
-<script>
-    function switchTab(tabId) {
-        
-        document.querySelectorAll('.tab-pane').forEach(pane => {
-            pane.classList.remove('active');
-        });
-        
-      
-        document.getElementById(tabId).classList.add('active');
+        </div>
         
         
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
+        <a href="menu.html" class="btn">
+            Let's go <i class="fa-regular fa-arrow-right"></i>
+        </a>
         
-        
-        event.currentTarget.classList.add('active');
-    }
-
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth < 380) {
-            document.body.classList.add('tiny-screen');
-        } else {
-            document.body.classList.remove('tiny-screen');
-        }
-    });
-</script>
 
 </body>
 </html>

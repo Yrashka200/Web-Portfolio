@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yrashka · card</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="card">
+    
+    
+    <div class="profile">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/259258104?v=4" alt="Yrashka">
+        <h1>Yrashka</h1>
+        <p class="tag">Junior Python Developer · Open Source</p>
+    </div>
+
+   
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('about')">
+            <i class="fa-regular fa-user"></i> About
+        </button>
+        <button class="tab-btn" onclick="switchTab('projects')">
+            <i class="fa-regular fa-folder-open"></i> Projects
+        </button>
+        <button class="tab-btn" onclick="switchTab('hobby')">
+            <i class="fa-regular fa-heart"></i> Hobby
+        </button>
+        <button class="tab-btn" onclick="switchTab('contact')">
+            <i class="fa-regular fa-envelope"></i> Contact
+        </button>
+    </div>
+
+    
+    <div class="tab-content">
+        
+        
+        <div id="about" class="tab-pane active">
+            <div class="about-text">
+                <p>I'm a junior Python developer and open-source enthusiast. I build small tools that automate repetitive tasks and experiment with web technologies.</p>
+                <p>Currently focusing on writing clean code. Open to collaboration.</p>
+            </div>
+
+            <div class="stats-mini">
+                <div class="stat-item">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">53+</span>
+                    <span class="stat-label">Contributions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Python</span>
+                    <span class="stat-label">Main stack</span>
+                </div>
+            </div>
+
+            <div class="skills-mini">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Automation</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">API</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </div> 
+
+        
+        <div id="projects" class="tab-pane">
+            <div class="projects-grid">
+                <a href="https://github.com/Yrashka200/PyASCII" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-image"></i> PyASCII</h3>
+                    <p>Convert images to ASCII art</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Yrashka200/Pc-Cleaner" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-trash-can"></i> PC Cleaner</h3>
+                    <p>Automated junk cleaner</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Yrashka200/Brawl-Stars-Profile-bot" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-robot"></i> Brawl Bot</h3>
+                    <p>Telegram bot for stats</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>API</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Yrashka200/PyOrganizer-" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-list-check"></i> PyOrganizer</h3>
+                    <p>Task management tool</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>CLI</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Yrashka200/Python-Project-Ideas-Generator" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-lightbulb"></i> Ideas Gen</h3>
+                    <p>Generate project ideas</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Yrashka200/Py-anime-Chat" target="_blank" class="project-card">
+                    <h3><i class="fa-regular fa-comments"></i> Py-anime-Chat</h3>
+                    <p>Chat bot with anime interface</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Bot</span>
+                    </div>
+                </a>
+            </div>
+        </div> 
+
+        
+        <div id="hobby" class="tab-pane">
+            <div class="hobby-grid">
+                <div class="hobby-item">
+                    <div class="hobby-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="hobby-content">
+                        <h3>Gaming</h3>
+                        <p>Sometimes I play games to relax after coding sessions</p>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <div class="hobby-icon"><i class="fa-solid fa-headphones"></i></div>
+                    <div class="hobby-content">
+                        <h3>Music</h3>
+                        <p>Listening to music 24/7 to stay focused</p>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <div class="hobby-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="hobby-content">
+                        <h3>Learning</h3>
+                        <p>Every day I try to learn something new</p>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <div class="hobby-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                    <div class="hobby-content">
+                        <h3>Coffee</h3>
+                        <p>Good coffee keeps long coding sessions enjoyable</p>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <div class="hobby-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="hobby-content">
+                        <h3>Open Source</h3>
+                        <p>Contributing to projects and learning from others</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        
+        <div id="contact" class="tab-pane">
+            <div class="contact-links">
+                <a href="https://github.com/Yrashka200" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>@Yrashka200</p>
+                </a>
+                <a href="https://bsky.app/profile/yrashka.bsky.social" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-bluesky"></i></div>
+                    <h3>Bluesky</h3>
+                    <p>@yrashka</p>
+                </a>
+                <a href="https://x.com/Yrashka200" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
+                    <h3>X</h3>
+                    <p>@Yrashka200</p>
+                </a>
+                <a href="https://instagram.com/yrashka200" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <h3>Instagram</h3>
+                    <p>@yrashka200</p>
+                </a>
+                <a href="https://yrashka200.github.io/blog.yrashka.github.io/" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-blog"></i></div>
+                    <h3>Blog</h3>
+                    <p>My blog</p>
+                </a>
+            </div>
+
+            <p class="contact-text">Or send me a message — I'll answer asap</p>
+            
+            <form class="form" action="https://formspree.io/f/xjgejlzk" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                </div>
+                
+                <textarea name="message" placeholder="Your message..." required></textarea>
+                
+                <button type="submit">
+                    <i class="fa-regular fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div> 
+    </div> 
+
+   
+    <div class="footer">
+        © 2026 Yrashka </div>
+</div> 
+
+<script>
+    function switchTab(tabId) {
+        
+        document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.remove('active');
+        });
+        
+      
+        document.getElementById(tabId).classList.add('active');
+        
+        
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        
+        event.currentTarget.classList.add('active');
+    }
+
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 380) {
+            document.body.classList.add('tiny-screen');
+        } else {
+            document.body.classList.remove('tiny-screen');
+        }
+    });
+</script>
+
+</body>
+</html>
